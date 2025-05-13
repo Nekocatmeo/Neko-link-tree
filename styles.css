@@ -15,12 +15,12 @@ html {background-color: hsl(0, 0%, 8%)}
     }
     font-size: 14px;
 }
-.modal{
+.modal-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    min-width: 300px;
     height: 500px;
     background: hsl(0, 0%, 12%);
     color: hsl(0, 0%, 100%);
@@ -28,7 +28,10 @@ html {background-color: hsl(0, 0%, 8%)}
     padding: 24px;
 }
 .modal-avatar{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     image-rendering: auto;
     object-fit: scale-down;
     overflow: clip;
@@ -73,9 +76,31 @@ html {background-color: hsl(0, 0%, 8%)}
     border-radius: 6px;
     font-weight: 700;
     font-size: 12px;
-    text-decoration: none;
+    text-decoration: none
     }
 .btn1:hover ,.btn2:hover, .btn3:hover, .btn4:hover, .btn5:hover {
     background-color: hsl(75, 94%, 57%);
     color: hsl(0, 0%, 12%);
 }
+@media screen and (max-width: 700px){
+    .modal {
+        max-width: 100%;
+        display: flex;
+        position: fixed;
+        align-items:  center;
+        justify-content: center;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .modal-content {
+        max-height: 90vh;
+        min-width: 300px;
+        overflow: auto;
+        position: relative;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+    
